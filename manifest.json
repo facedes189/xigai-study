@@ -1,0 +1,15 @@
+{
+  "name": "习概复习助手",
+  "short_name": "习概复习",
+  "description": "《习近平新时代中国特色社会主义思想概论》单选题刷题与背书默写",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f5f1",
+  "theme_color": "#a02c26",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
