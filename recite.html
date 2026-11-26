@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#a02c26">
+<title>背书默写 · 习概复习助手</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand-mark">习</div>
+    <div class="brand-text"><b>背书默写</b><small>先默写 · 再对照 · 后自评</small></div>
+    <div class="spacer"></div>
+    <a class="link-home" href="index.html">首页</a>
+  </div>
+</header>
+
+<main class="shell">
+
+  <div class="card tight" id="overview"></div>
+
+  <div class="tabbar" id="tabbar">
+    <button class="tab on" data-tab="short">简答题 10</button>
+    <button class="tab" data-tab="essay">论述题 5</button>
+    <button class="tab" data-tab="term">核心术语 19</button>
+  </div>
+
+  <!-- 简答题 -->
+  <section class="pane on" id="pane-short">
+    <div class="card tight">
+      <div class="progress-wrap">
+        <div class="progress"><i id="bar-short" style="width:0%"></i></div>
+        <div class="progress-num" id="num-short">—</div>
+      </div>
+      <div class="chip-row" style="margin-top:12px" id="filter-short">
+        <button class="chip on" data-f="all">全部</button>
+        <button class="chip" data-f="todo">只背未掌握</button>
+        <button class="chip" data-f="done">只看已掌握</button>
+      </div>
+    </div>
+    <div class="card" id="body-short"></div>
+    <div class="btn-row" style="margin-top:12px">
+      <button class="btn btn-ghost btn-sm" data-nav="short" data-d="-1">← 上一题</button>
+      <button class="btn btn-ghost btn-sm" data-nav="short" data-d="1">下一题 →</button>
+      <button class="btn btn-ghost btn-sm" data-rand="short">随机一题</button>
+      <button class="btn btn-ghost btn-sm" data-clear="short">清空标记</button>
+    </div>
+  </section>
+
+  <!-- 论述题 -->
+  <section class="pane" id="pane-essay">
+    <div class="card tight">
+      <div class="progress-wrap">
+        <div class="progress"><i id="bar-essay" style="width:0%"></i></div>
+        <div class="progress-num" id="num-essay">—</div>
+      </div>
+      <div class="chip-row" style="margin-top:12px" id="filter-essay">
+        <button class="chip on" data-f="all">全部</button>
+        <button class="chip" data-f="todo">只背未掌握</button>
+        <button class="chip" data-f="done">只看已掌握</button>
+      </div>
+    </div>
+    <div class="card" id="body-essay"></div>
+    <div class="btn-row" style="margin-top:12px">
+      <button class="btn btn-ghost btn-sm" data-nav="essay" data-d="-1">← 上一题</button>
+      <button class="btn btn-ghost btn-sm" data-nav="essay" data-d="1">下一题 →</button>
+      <button class="btn btn-ghost btn-sm" data-rand="essay">随机一题</button>
+      <button class="btn btn-ghost btn-sm" data-clear="essay">清空标记</button>
+    </div>
+  </section>
+
+  <!-- 核心术语 -->
+  <section class="pane" id="pane-term">
+    <div class="card tight">
+      <div class="progress-wrap">
+        <div class="progress"><i id="bar-term" style="width:0%"></i></div>
+        <div class="progress-num" id="num-term">—</div>
+      </div>
+      <div class="chip-row" style="margin-top:12px" id="filter-term">
+        <button class="chip on" data-f="all">全部</button>
+        <button class="chip" data-f="todo">只背未掌握</button>
+        <button class="chip" data-f="done">只看已掌握</button>
+      </div>
+    </div>
+    <div class="card" id="body-term"></div>
+    <div class="btn-row" style="margin-top:12px">
+      <button class="btn btn-ghost btn-sm" data-nav="term" data-d="-1">← 上一条</button>
+      <button class="btn btn-ghost btn-sm" data-nav="term" data-d="1">下一条 →</button>
+      <button class="btn btn-ghost btn-sm" data-rand="term">随机一条</button>
+      <button class="btn btn-ghost btn-sm" data-clear="term">清空标记</button>
+    </div>
+  </section>
+
+  <div class="footer">
+    默写草稿与掌握标记自动保存在本机浏览器 · 换设备不会同步<br>
+    <a href="index.html">返回首页</a> · <a href="quiz.html">去刷题 →</a>
+  </div>
+</main>
+
+<script src="assets/data.js"></script>
+<script src="assets/recite.js"></script>
+</body>
+</html>
